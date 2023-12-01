@@ -1,0 +1,92 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    width: 100%;
+    height: auto;
+    padding: 10px; /* Adjust the padding as needed */
+    color:white;
+    
+}
+.NavbarShoppingCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:95% 
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .NavbarShoppingCart {
+      margin-top: 10px; /* Adjust the margin for smaller screens */
+    }
+  } 
+  /* Add your styles for the left panel and other components */
+.left-panel {
+  width: 100%; /* Adjust the width as needed */
+  
+  padding: 20px;
+  height:100%;
+}
+
+.category-section,
+.gender-section,
+.availability-section {
+  margin-bottom: 20px;
+}
+
+.category-title{
+   font-weight: 450;
+}
+.gender-title,
+.availability-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.category-list,
+.availability-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-list a,
+.availability-list span {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.category-list a:hover,
+.availability-list span:hover {
+  color: #e44d26; /* Example color */
+}
+
+/* styles.css */
+.product-sizes-container {
+  margin-bottom: 10px;
+   /* Add margin to create space after the size */
+}
+
+.product-sizes-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin-left: 10px;
+   /* Adjust the spacing between size and name */
+}
+
+.product-size-box {
+  margin-right: 10px; /* Adjust the spacing between size boxes */
+  border: 1px solid #ccc; /* Add a border to the size boxes */
+  padding: 10px;
+  
+}
+
+ 
