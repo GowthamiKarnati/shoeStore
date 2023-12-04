@@ -29,11 +29,14 @@
   /* Add your styles for the left panel and other components */
 .left-panel {
   width: 100%; /* Adjust the width as needed */
-  
   padding: 20px;
   height:100%;
 }
-
+@media (max-width: 768px) {
+  .left-panel {
+    width: 100%; /* Make it full-width on smaller screens */
+  }
+}
 .category-section,
 .gender-section,
 .availability-section {
