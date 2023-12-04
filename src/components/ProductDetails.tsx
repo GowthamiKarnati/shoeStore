@@ -263,7 +263,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id }) => {
     setSuccessMessage('Item purchased. It will be delivered in 2 days.');
     setTimeout(() => {
       setSuccessMessage(null);
-    }, 1500);
+    }, 3000);
   };
 
   if (!productDetails) {
@@ -324,7 +324,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id }) => {
           <h1>{productDetails.name}</h1>
           <p>Brand: {productDetails.brand}</p>
           <p>Price: ₹{productDetails.price}</p>
-          <ProductSizes sizes={productDetails.sizes} />
+          <ProductSizes sizes={productDetails.sizes}  id={productDetails.id}/>
         </div>
       </div>
     </div>

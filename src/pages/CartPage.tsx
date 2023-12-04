@@ -1,7 +1,7 @@
 // src/pages/CartPage.tsx
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCartItems } from '../features/cart/selectors';
+import { selectCartItems, selectSelectedSizes } from '../features/cart/selectors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import '../components/styles.css'
@@ -9,6 +9,7 @@ import { removeItemFromCart } from '../features/cart/actions';
 const CartPage: React.FC = () => {
     const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);
+    const selectedSizes = useSelector(selectSelectedSizes);
     const handleRemoveItem = (itemId: number) => {
         // Dispatch the action to remove the item from the cart
         dispatch(removeItemFromCart(itemId));
@@ -31,7 +32,8 @@ const CartPage: React.FC = () => {
           </div>
           <div className="cart-item-details">
             <p className="cart-item-name">{item.name}</p>
-            <h3>₹{item.price}</h3>
+            <h3 style={{fontSize:'18px'}} >₹{item.price}</h3>
+            <p style={{fontSize:'15px'}}>Size: {selectedSizes[item.id]}</p>
             
             
           </div>

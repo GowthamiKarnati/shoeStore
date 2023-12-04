@@ -86,9 +86,11 @@
 }
 
 .product-size-box {
-  margin-right: 10px; /* Adjust the spacing between size boxes */
+  margin-right: 15px; /* Adjust the spacing between size boxes */
   border: 1px solid #ccc; /* Add a border to the size boxes */
   padding: 10px;
+  cursor:pointer;
+  
   
 }
 /* src/styles/cartPage.css */
@@ -119,7 +121,7 @@
 
 .cart-item-name {
   font-size: 18px;
-  font-weight: bold;
+  
   margin-bottom: 10px;
 }
 
