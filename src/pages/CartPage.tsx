@@ -17,7 +17,9 @@ const CartPage: React.FC = () => {
   return (
     <div className="cart-page">
       <h1>Your Cart</h1>
-      {cartItems.map((item) => (
+      {cartItems.length === 0 ? (
+                <p>Your cart is empty.</p>
+            ):(cartItems.map((item) => (
         <div key={item.id} className="cart-item">
           <div className="cart-item-image">
             <img src={item.image} alt={item.name} />
@@ -45,7 +47,8 @@ const CartPage: React.FC = () => {
           
         </div>
         
-      ))}
+      )))
+            }
     </div>
   );
 };
